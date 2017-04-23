@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+<title>I love database</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/lib/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+    
+<style>
+body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
+</style>
+<body class="w3-light-grey">
+
+<!-- w3-content defines a container for fixed size centered content, 
+and is wrapped around the whole page content, except for the footer in this example -->
+<div class="w3-content" style="max-width:1400px">
+
+<!-- Header -->
+<header class="w3-container w3-center w3-padding-32"> 
+  <h1><b>Price Tracker</b></h1>
+  <p>You must buy something <span class="w3-tag">very</span> expensive</p>
+</header>
+    
+<!-- Grid -->
+<div class="w3-row">
+
+<!-- Blog entries -->
+<div class="w3-col l8 s12">
+  <!-- Blog entry -->
+  <div class="w3-card-4 w3-margin w3-white">
+    <div class="w3-container w3-padding-8">
+        <h3><b>Search item</b></h3>
+        <p align= "left">   
+         Item_NO:<br/>
+        <td valign="center">
+					<td width="41%">
+						<div class="center">
+                            <form action="addItem.php" method="post" target="_blank">
+								<input name="search_param" type="text"" /><br/>
+                                <br/>
+								<input name="AddItem" type="submit" value="Search Item" /><br/>
+								<text align="center"> <br/> 
+							</form>
+						</div>
+					</td>
+        <h3><b>Remove Your item</b></h3>
+        <td valign="center">
+            <p align= "left">   
+         Item_NO:<br/>
+					<td width="41%">
+						<div class="center">
+                            <form action="DEMO/remove.php" method="post" target="_blank">
+								<input name="remove_param" type="text" /><br/>
+                                <br/>
+								<input name="Search" type="submit" value="Search" /><br/>
+								<text align="center">  
+								</p>
+							</form>
+						</div>
+					</td>
+        <h3><b>Item Info</b></h3>
+        <p align= "left">   
+         Item NO:<br/>
+         <td valign="center">
+					<td width="41%">
+						<div class="center">
+                            <form action="DEMO/searchName.php" method="post" target="_blank">
+								<input name="search_param" type="text" /><br/>
+                                <br/>
+								<input name="Search" type="submit" value="Search" /><br/>
+								<text align="center">  
+								</p>
+							</form>
+						</div>
+					</td>
+        <h3><b>Update(Insert) Your item</b></h3>
+        <td valign="center">
+					<td width="41%">
+						<div class="center">
+                            <form action="DEMO/update.php" method="post" target="_blank">
+								<p align= "left">   
+								Item NO:<br/> <input name="Item_No" type="text"  /><br/>
+								Item Name:<br/> <input name="Item_name" type="text" /><br/><br/>
+                                <input name="Sign Up" type="submit" value="Update(Insert)" />
+                                </p>
+							</form>
+						</div>
+					</td>
+      <h5><span class="w3-opacity">April, 2017</span></h5>
+    </div>
+    <div class="w3-container">
+      <p>This website is designed to track products' prices everyday and help customers to save money!</p>
+    </div>
+  </div>
+  <hr>
+
+<!-- END BLOG ENTRIES -->
+</div>
+
+<!-- Introduction menu -->
+<div class="w3-col l4">
+  <!-- About Card -->
+  <div class="w3-card-2 w3-margin w3-margin-top">
+    <div class="w3-container w3-white">
+        <h3><b>I want to follow</b></h3>
+        <td valign="center">
+					<td width="41%">
+						<div class="center">
+                            <form action="follow.php" method="post" target="_blank">
+								<p align= "left">   
+								Item_NO:<br/><br/> <input name="Item_NO" type="text"  />
+                                </p>
+                                <input name="Follow" type="submit" value="I want to follow" />
+							</form>
+						</div>
+					</td>
+        <br/> 
+       <h3><b>I am feeling lucky</b></h3>
+        <td valign="center">
+					<td width="200%">
+						<div class="center">
+                            <form action="Recommand.php" method="post" target="_blank">
+                                <input name="Recommand" type="submit" value="I am feeling lucky" />
+							</form>
+						</div>
+					</td> 
+        <td align="center">
+				<table width="640" border="0" cellpadding="3">
+					<td width="45%">
+						<div class="center">
+							<h4>Login In:</h4>
+							<form action="plogin.php" method="post" target="_blank">
+								<p align= "left">
+								 User_Email:&nbsp <br/><input name="username" type="text"  /><br/>
+								 User_Password:&nbsp <br/><input name="password" type="password" /><br/>
+								<input name="Sign In" type="submit" value="Sign In" /><br/>
+								</p>
+							</form>
+							
+							<h4>Sign Up:</h4>
+							<form action="sign_up.php" method="post" target="_blank">
+								<p align= "left">   
+                Email:<br/> <input name="email" type="text" /><br/>
+								User_Password:<br/> <input name="password" type="password" /><br/>
+                                Age:   <br/><select name="Age">
+                                    <option value='1' selected>under 20</option>
+                                    <option value='2'>20-40</option>
+                                    <option value='3'>40-60</option>
+                                    <option value='4'>above 60</option>
+                                    </select>
+                                    <br/> 
+                                Gender:   <br/><select name="Gender">
+                                    <option value=0>male</option>
+                                    <option value=1>female</option>
+                                    </select>
+                                    <br/> 
+                                Income(month):   <br/><select name="Income">
+                                    <option value=1>under 3000</option>
+                                    <option value=2>3000-6000</option>
+                                    <option value=3>6000-9000</option>
+                                    <option value='above 9000' selected>above 9000 </option>
+                                    </select>
+                                    <br/> <br/>    
+								<input name="Sign Up" type="submit" value="Sign Up" />
+                                </p>
+								<br/>
+							</form>
+						</div>
+					</td>
+            <hr> 
+  <!-- Labels / tags -->
+    </p>
+    </div>
+  </div>
+  
+
+<!-- END GRID -->
+</div><br>
+
+<!-- END w3-content -->
+</div>
+
+
+</body>
+</html>
